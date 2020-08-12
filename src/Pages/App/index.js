@@ -1,9 +1,9 @@
 import React from "react";
 import "../App/index.css";
 
+import List from "../../Components/List/";
+
 import { Header } from "../../Elements/Header/";
-import { List } from "../../Elements/List/";
-import Task from "../../Components/Task/";
 import { Button } from "../../Elements/Button/";
 import { AddTask } from "../../Elements/AddTask/";
 import { Input } from "../../Elements/Input/";
@@ -13,7 +13,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       taskText: "",
-      tasks: [],
+      tasks: ["write to-do list"],
     };
   }
 
@@ -39,23 +39,11 @@ class App extends React.Component {
     }
   };
 
-  deleteTask(index) {
-    let tasksArr = this.state.tasks;
-    tasksArr.splice(index, 1);
-    this.setState({ tasks: tasksArr });
-  }
-
   render() {
-    let tasks = this.state.tasks.map((val, key) => {
-      return (
-        <Task key={key} text={val} deleteMethod={() => this.deleteTask(key)} />
-      );
-    });
-
     return (
       <div className="app">
         <Header>To-Do:</Header>
-        <List>{tasks}</List>
+        <List tasks={this.state.tasks} />
         <AddTask>
           <Input
             type="text"
