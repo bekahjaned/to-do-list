@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a task 1`] = `
+<div
+  className="sc-AxirZ glbUEU"
+>
+  <p>
+    wash dishes
+  </p>
+  <button
+    className="sc-AxjAm kuVXIB"
+  >
+    x
+  </button>
+</div>
+`;
+
+exports[`renders multiple tasks 1`] = `
+<div
+  className="sc-AxirZ glbUEU"
+>
+  <p>
+    do this
+    do that
+  </p>
+  <button
+    className="sc-AxjAm kuVXIB"
+  >
+    x
+  </button>
+</div>
+`;

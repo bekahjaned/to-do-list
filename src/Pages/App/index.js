@@ -3,7 +3,7 @@ import "../App/index.css";
 
 import { Header } from "../../Elements/Header/";
 import { List } from "../../Elements/List/";
-import Task from "../../Elements/Task/";
+import Task from "../../Components/Task/";
 import { Button } from "../../Elements/Button/";
 import { AddTask } from "../../Elements/AddTask/";
 import { Input } from "../../Elements/Input/";
