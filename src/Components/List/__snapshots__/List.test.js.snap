@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a Task 1`] = `
+<div
+  className="sc-AxiKw bNTdIo"
+>
+  <div
+    className="sc-AxirZ glbUEU"
+  >
+    <p>
+      wash dishes
+    </p>
+    <button
+      className="sc-AxjAm kuVXIB"
+      onClick={[Function]}
+    >
+      x
+    </button>
+  </div>
+  <div
+    className="sc-AxirZ glbUEU"
+  >
+    <p>
+      do laundry
+    </p>
+    <button
+      className="sc-AxjAm kuVXIB"
+      onClick={[Function]}
+    >
+      x
+    </button>
+  </div>
+</div>
+`;
