@@ -14,19 +14,3 @@ exports[`renders a task 1`] = `
   </button>
 </div>
 `;
-
-exports[`renders multiple tasks 1`] = `
-<div
-  className="sc-AxirZ glbUEU"
->
-  <p>
-    do this
-    do that
-  </p>
-  <button
-    className="sc-AxjAm kuVXIB"
-  >
-    x
-  </button>
-</div>
-`;
