@@ -1,23 +1,24 @@
 import React from "react";
 import "../App/index.css";
 
-import List from "../../Components/List/";
+import List from "../../Components/List/index";
 
 import { Header } from "../../Elements/Header/";
 import { Button } from "../../Elements/Button/";
 import { AddTask } from "../../Elements/AddTask/";
 import { Input } from "../../Elements/Input/";
 
-class App extends React.Component {
-  constructor(props) {
+class App extends React.Component<any, any> {
+  textInput: any;
+  constructor(props: any) {
     super(props);
     this.state = {
       taskText: "",
-      tasks: ["write to-do list"],
+      tasks: ["write to-do list", "eat some weird pasta"],
     };
   }
 
-  updateText(taskText) {
+  updateText(taskText: any) {
     this.setState({ taskText: taskText.target.value });
   }
 
@@ -25,25 +26,27 @@ class App extends React.Component {
     if (this.state.taskText === "") {
       return;
     }
-    let tasksArr = this.state.tasks;
+    let tasksArr: string[] = this.state.tasks;
     tasksArr.push(this.state.taskText);
     this.setState({ taskText: "" });
     this.textInput.focus();
   }
 
-  handleKeyPress = (event) => {
+  handleKeyPress = (event: any) => {
     if (event.key === "Enter") {
-      let tasksArr = this.state.tasks;
+      let tasksArr: string[] = this.state.tasks;
       tasksArr.push(this.state.taskText);
       this.setState({ taskText: "" });
     }
   };
 
   render() {
+    const { tasks, taskText } = this.state;
+
     return (
       <div className="app">
         <Header>To-Do:</Header>
-        <List tasks={this.state.tasks} />
+        <List tasks={tasks} />
         <AddTask>
           <Input
             type="text"
@@ -51,7 +54,7 @@ class App extends React.Component {
             ref={(input) => {
               this.textInput = input;
             }}
-            value={this.state.taskText}
+            value={taskText}
             onChange={(taskText) => this.updateText(taskText)}
             onKeyPress={this.handleKeyPress.bind(this)}
           />
